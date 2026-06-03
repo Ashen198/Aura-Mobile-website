@@ -1,13 +1,4 @@
-function login(){
-    /*let user = document.getElementById("username").value;
-    let pass = document.getElementById("password").value;
-
-    if(user ==="" || pass === ""){
-        alert("please fill all fields")
-    }else{
-        alert("Login Successfull !")
-    }*/
-
+function login() {
     var username = document.getElementById("username").value.trim();
     var password = document.getElementById("password").value.trim();
 
@@ -16,12 +7,32 @@ function login(){
         return;
     }
 
-    if (username === "asharaashen" && password === "2004") {
-        window.location.href = "homePage.html";
-    } else if ((username === "admin" && password === "1234")){
+    // Admin back-door path
+    if (username === "admin" && password === "1234") {
         window.location.href = "adminActive.html";
-    } else{
-        alert("Invalid Username or Password!");
+        return; 
     }
 
+    // Database check path
+    var formData = new FormData();
+    formData.append("email", username); 
+    formData.append("password", password);
+
+    fetch("login.php", {
+        method: "POST",
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.status === "success") {
+            alert("Login successful! Welcome back.");
+            window.location.href = "homePage.html"; 
+        } else {
+            alert(data.message); // This will show your "No account found..." message cleanly in an alert box!
+        }
+    })
+    .catch(error => {
+        console.error("Error:", error);
+        alert("Something went wrong connecting to the server.");
+    });
 }
