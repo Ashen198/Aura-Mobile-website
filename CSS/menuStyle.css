@@ -1,0 +1,48 @@
+h4{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+}
+
+.profile-container {
+    position: relative;
+    display: inline-block;
+    margin-left: 100px;
+}
+
+.profile-btn {
+    background: transparent;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* Dropdown box */
+.profile-menu {
+    position: absolute;
+    top: 45px;
+    right: 0;
+    width: 160px;
+    padding: 10px 0;
+    
+    background: rgba(255, 255, 255, 0.15); /* Transparent */
+    backdrop-filter: blur(10px);           /* Glass effect */
+    border-radius: 12px;
+    
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    
+    display: none; /* Hidden by default */
+}
+
+/* Menu links */
+.profile-menu a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: black;
+    transition: 0.3s;
+}
+
+.profile-menu a:hover {
+    background: rgba(255,255,255,0.3);
+    border-radius: 8px;
+}
