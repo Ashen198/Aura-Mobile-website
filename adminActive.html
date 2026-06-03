@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Item Listing Dashboard</title>
+<link rel="stylesheet" href="CSS/adActive.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+
+        <div class="logo">
+            <img src="rsc/logo.jpeg" alt="Logo">
+        </div>
+
+
+
+        <a href="adminItem.html" class="menu-btn">List an item</a>
+
+        <a href="adminActive.html" class="menu-btn">Update item</a>
+
+        <a href="adminOrders.html" class="menu-btn">Orders</a>
+
+        <a href="adminTran.html" class="menu-btn">Transaction</a>
+
+        <a href="adminAnalysis.html" class="menu-btn">Analysis</a>
+
+        <a href="loginPage.html" class="menu-btn">Log Out</a>
+
+    </div>
+
+
+    <!-- Main Content -->
+    <div class="main">
+
+
+
+ <!-- PRODUCT LIST PAGE -->
+            <div id="products" class="page">
+                <h2>Active Items</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Image</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Stock</th>
+                            <th>Description</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="productTable"></tbody>
+                </table>
+            </div>
+
+
+</div>
+
+
+</div>
+<script src="JS/adminActive.js"></script>
+</body>
+</html>

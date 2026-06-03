@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Aura Mobile</title>
+    <link rel="stylesheet" href="CSS/homeStyle.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+ <div class="header">
+        <div class="searchlogo">
+        
+    <div class="left-logo">
+       <a href="homePage.html"><img src="rsc/logo.jpeg"></a> 
+    </div>
+    <div class="search-bar">
+       <form action="/search/" >
+       <input type="search" id="movie" name="q" placeholder="Search"  />
+       <button type="submit">🔍</button>
+       </form>
+    </div>
+    </div>
+    
+    <ul>
+    
+     <li><a href="homePage.html" class="glass-btn">Home</a></li>
+     <li><a href="productPage.html" class="glass-btn">Product</a></li>
+     <li><a href="aboutPage.html" class="glass-btn">About</a></li>
+     <li><a href="cartPage.html" class="glass-btn">Cart</a></li>
+      <li><button class="profile-btn" onclick="toggleMenu()">
+        👤
+    </button></li>
+     
+      </ul>
+    </div>
+     
+
+
+    <div class="profile-container">
+    
+
+    <div class="profile-menu" id="profileMenu">
+        <a href="loginPage.html">Login</a>
+        <a href="register.html">Register</a>
+        <a href="paymentDetails.html">Payments</a>
+        <a href="paymentDetails.html">My Profile</a>
+        <a href="termspage.html">T & C</a>
+        <a href="loginPage.html">Logout</a>
+    </div>
+    </div> 
+
+    
+    <br><br><br><br><br>
+   
+
+   <br>
+   
+
+
+
+
+
+
+
+
+  
+   <div class="slideshow-container">
+
+  <div class="slide fade">
+    <img src="rsc/iphone17proLargeBanner.png" width="500px" alt="Slide 1">
+    <a href="productPage.html"><div class="slide-text">Shop Now </div></a>
+  </div>
+                          
+  <div class="slide fade">
+    <img src="rsc/AppleWatch11Banner.png" alt="Slide 2">
+    <a href="productPage.html"><div class="slide-text">Shop Now </div></a>
+  </div>
+
+  <div class="slide fade">
+    <img src="rsc/iphoneExchangeBannerLarge.png" alt="Slide 3">
+    
+  </div>
+
+  <!-- Navigation arrows -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+<!-- Dots for slides -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+
+<br>
+
+
+
+
+
+   
+
+   
+
+   
+   
+  
+
+   <div class="image3-container">
+   <img src="rsc/watch11.jpg" alt="image2">
+    <div class="watch11">
+      <h4>
+        Apple Watch Series 11
+      </h4>
+      
+
+      <div class="watch11-details">
+        <p>
+         64GB <br>
+         Slate / Gold / Natural <br>
+         One Year Apple Care Warranty <br>
+
+
+        </p>
+      </div>
+    </div>
+
+  <br><br>
+
+  <!--watch 11 video -->
+   <div class="watchVideo">
+
+    <video width="" controls autoplay muted loop > <source src="rsc/watch11.mp4" type="video/mp4"></video>
+
+   </div>
+
+   <!--watch 11 image black -->
+   <div class="watch11Black">
+
+    <img src="rsc/watch11Black.jpg" alt="watch11Black">
+
+   </div>
+
+   
+
+ <div class="image4-container">
+   <img src="rsc/airpods4.jpg" alt="image4">
+    
+  
+   
+    <div class="airpods4">
+      <h4>
+        Apple airpods 4
+      </h4>
+    
+
+      <div class="airpods4-details">
+        <p>
+         Live Listen audio <br>
+         H2 headphone chip <br>
+         Live Translation <br>
+        </p>
+      </div>
+    </div>
+   
+
+
+  </div>
+  <br>
+  
+
+
+
+
+  <div class="iphone17-details">
+
+    <h4>
+        Apple iphone 17 
+    </h4>
+       
+
+    
+
+      <div class="iphone17">
+        <p>
+         512GB / 256GB <br>
+         Lavender / Black / Mist Blue <br>
+         5G Capable <br>
+         One Year Apple Care Warranty
+        </p>
+      </div>
+    </div>
+
+
+      </div>
+
+
+  <div class="image2-container">
+   <img src="rsc/iphone 17.jpg" alt="image2">
+  
+   </div>
+
+
+
+  
+  
+
+        <footer class="footer">
+    <div class="footer-container">
+
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <a href="homePage.html">Home</a>
+            <a href="productPage.html">Products</a>
+            <a href="aboutPage.html">About Us</a>
+            <a href="cartPage.html">Cart</a>
+            <a href="contactPage.html">Contact</a>
+        </div>
+
+        <div class="footer-section">
+            <h3>Account</h3>
+            <a href="loginPage.html">Login</a>
+            <a href="register.html">Register</a>
+            <a href="profile.html">My Profile</a>
+            <a href="paymentDetails.html">Payments</a>
+            <a href="termspage.html">Terms & Conditions</a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 Product Aura | All Rights Reserved</p>
+    </div>
+</footer>
+
+
+
+    <script src="js/home.js"></script>
+    <script src="js/menu.js"></script>
+
+</body>
+</html>

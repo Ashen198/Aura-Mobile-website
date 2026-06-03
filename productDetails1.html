@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Aura Mobile</title>
+    <link rel="stylesheet" href="CSS/productDetails1Style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  
+    
+  <div class="header">
+      <div class="searchlogo">
+        
+    <div class="left-logo">
+       <a href="homePage.html"><img src="rsc/logo.jpeg"></a> 
+    </div>
+    <div class="search-bar">
+       <form action="/search/" >
+       <input type="search" id="movie" name="q" placeholder="Search"  />
+       <button type="submit">🔍</button>
+       </form> 
+    </div>
+    </div>
+    
+    <ul>
+    
+     <li><a href="homePage.html" class="glass-btn">Home</a></li>
+     <li><a href="productPage.html" class="glass-btn">Product</a></li>
+     <li><a href="aboutPage.html" class="glass-btn">About</a></li>
+     <li><a href="cartPage.html" class="glass-btn">cart</a></li>
+     <li><button class="profile-btn" onclick="toggleMenu()">
+        👤
+    </button></li>
+     
+      </ul>
+  </div>
+</div>
+
+
+    <div class="profile-container">
+    
+
+    <div class="profile-menu" id="profileMenu">
+        <a href="loginPage.html">Login</a>
+        <a href="register.html">Register</a>
+        <a href="paymentDetails.html">Payments</a>
+        <a href="paymentDetails.html">My Profile</a>
+        <a href="termspage.html">T & C</a>
+        <a href="loginPage.html">Logout</a>
+    </div>
+    </div> 
+
+    
+    <br><br><br>
+
+   
+    <div class="mainTitle">
+      <p>iPhone 17 Pro </p>
+    </div>
+   
+
+    
+    <!-- Product image set -->
+<div class="liquid-glass">
+
+
+     <div class="product-container1">
+
+    <!-- Main Image Frame -->
+    <div class="main-image">
+        <img id="mainImage" src="rsc/iphone17 pro.jpg" alt="Product Image">
+    </div>
+
+    <!-- Thumbnail Images -->
+    <div class="thumbnail-container">
+        <img src="rsc/airpods4.jpg" onclick="changeImage(this)">
+        <img src="rsc/iphone17 pro.jpg" onclick="changeImage(this)">
+        <img src="rsc/watch11.jpg"  onclick="changeImage(this)">
+        <img src="rsc/iphone17 pro.jpg" onclick="changeImage(this)">
+    </div>
+
+    
+
+
+  <!--Product specification selectioning area -->
+    <script>
+function selectColor(el) {
+  document.querySelectorAll(".color").forEach(c => c.classList.remove("active"));
+  el.classList.add("active");
+}
+
+function selectOption(el) {
+  document.querySelectorAll(".option").forEach(o => o.classList.remove("active"));
+  el.classList.add("active");
+}
+
+let quantity = 1;
+
+function changeQty(val) {
+  quantity += val;
+  if (quantity < 1) quantity = 1;
+  document.getElementById("qty").innerText = quantity;
+}
+</script>
+
+
+
+
+
+  <div class="product-container">
+
+  
+
+  <!-- RIGHT: Details -->
+  <div class="right">
+    <p class="price">From LKR 292,000.00</p>
+
+    <!-- Colors -->
+    <h3>Available colours:</h3>
+    <div class="colors">
+      <div class="color" style="background:#b57edc" onclick="selectColor(this)"></div>
+      <div class="color" style="background:#eee" onclick="selectColor(this)"></div>
+      <div class="color" style="background:#000" onclick="selectColor(this)"></div>
+      <div class="color" style="background:#8a9aa5" onclick="selectColor(this)"></div>
+    </div>
+
+    <!-- Storage -->
+    <h3>Available capacity:</h3>
+    <div class="storage">
+      <div class="option" onclick="selectOption(this)">256GB</div>
+      <div class="option" onclick="selectOption(this)">512GB</div>
+    </div>
+
+    <!-- Quantity -->
+    <div class="qty">
+      <button class="glass-btn" onclick="changeQty(-1)">-</button>
+      <span id="qty">1</span>
+      <button class="glass-btn" onclick="changeQty(1)">+</button>
+    </div>
+
+    <!-- Buttons -->
+    <button class="buy">Buy Now</button>
+    <br>
+    <button class="buy-btn" onclick="addToCartDetails()">Add to Cart</button>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+  </div>
+
+  
+
+</div>
+
+<div class="liquid-glass">
+  <div class="product-details">
+      <h2>Product Details</h2>
+      <p>Introducing the iPhone 17 Pro, the latest innovation from Apple. Experience cutting-edge technology and design.</p>
+      
+      <!--watch 11 video -->
+   <div class="A19ChipVideo">
+
+    <video width="" controls autoplay muted loop > <source src="rsc/A19Chip.mp4" type="video/mp4"></video>
+
+   </div>
+   <br>
+
+   <div class="iphone17pro3">
+       <img src="rsc/iphone17pro3.png" alt="iphone17pro3">
+   </div>
+
+   <div class="iphone17pro4">
+       <img src="rsc/iphone17pro4.jpg" alt="iphone17pro4">
+   </div>
+
+
+      
+      <h3>Features:</h3>
+          <p>6.7-inch Super Retina XDR display</p>
+          <p>A19 Bionic chip</p>
+          <p>ProMotion technology for smoother scrolling</p>
+          <p>Triple-camera system with advanced computational photography</p>
+      
+      <div class="iphone17pro5">
+       <img src="rsc/iphone17pro5.jpg" alt="iphone17pro5">
+      </div>
+      
+      
+      
+
+  </div>
+</div>
+
+
+
+
+
+
+
+          <footer class="footer">
+    <div class="footer-container">
+
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <a href="homePage.html">Home</a>
+            <a href="productPage.html">Products</a>
+            <a href="aboutPage.html">About Us</a>
+            <a href="cartPage.html">Cart</a>
+            <a href="contactPage.html">Contact</a>
+        </div>
+
+        <div class="footer-section">
+            <h3>Account</h3>
+            <a href="loginPage.html">Login</a>
+            <a href="register.html">Register</a>
+            <a href="profile.html">My Profile</a>
+            <a href="paymentDetails.html">Payments</a>
+            <a href="termspage.html">Terms & Conditions</a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 Product Aura | All Rights Reserved</p>
+    </div>
+</footer>
+
+   
+
+    <script src="JS/proDet1.js"></script>
+    <script src="js/menu.js"></script>
+
+</body>
+</html>
