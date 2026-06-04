@@ -1,4 +1,3 @@
-
 // Add new product
 function addProduct() {
     let name = document.getElementById("pname").value.trim();
@@ -12,32 +11,41 @@ function addProduct() {
         return;
     }
 
-    let file = fileInput.files[0];
-    let reader = new FileReader();
+    // Create a FormData object to easily send files and text data
+    let formData = new FormData();
+    formData.append("pname", name);
+    formData.append("pprice", price);
+    formData.append("pstock", stock);
+    formData.append("pdesc", desc);
+    formData.append("pimage", fileInput.files[0]);
 
-    reader.onload = function(e) {
-        let products = JSON.parse(localStorage.getItem("products")) || [];
-        products.push({
-            name: name,
-            price: price,
-            stock: stock,
-            description: desc,
-            image: e.target.result // base64 data URL
-        });
-        localStorage.setItem("products", JSON.stringify(products));
+    // Send data to PHP backend
+    fetch("addProduct.php", {
+        method: "POST",
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.status === "success") {
+            alert(data.message);
 
-        alert("Product Added");
-
-        // Clear form
-        document.getElementById("pname").value = "";
-        document.getElementById("pprice").value = "";
-        document.getElementById("pstock").value = "";
-        document.getElementById("pdesc").value = "";
-        document.getElementById("pimage").value = "";
-
-        loadProducts(); // update table
-        document.getElementById("totalProducts").innerText = products.length;
-    };
-
-    reader.readAsDataURL(file);
+            // Clear form fields
+            document.getElementById("pname").value = "";
+            document.getElementById("pprice").value = "";
+            document.getElementById("pstock").value = "";
+            document.getElementById("pdesc").value = "";
+            document.getElementById("pimage").value = "";
+            
+            // If you have a function to reload elements on the dashboard, call it here
+            if (typeof loadProducts === "function") {
+                loadProducts(); 
+            }
+        } else {
+            alert("Error: " + data.message);
+        }
+    })
+    .catch(error => {
+        console.error("Error:", error);
+        alert("An error occurred while adding the product.");
+    });
 }

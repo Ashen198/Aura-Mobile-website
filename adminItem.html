@@ -1,64 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Item Listing Dashboard</title>
-<link rel="stylesheet" href="CSS/adItem.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item Listing Dashboard</title>
+    <link rel="stylesheet" href="CSS/adItem.css">
 </head>
-
 <body>
 
 <div class="container">
 
-    <!-- Sidebar -->
     <div class="sidebar">
-
         <div class="logo">
             <img src="rsc/logo.jpeg" alt="Logo">
         </div>
-
         <a href="adminItem.html" class="menu-btn">List an item</a>
-
         <a href="adminActive.html" class="menu-btn">Update item</a>
-
         <a href="adminOrders.html" class="menu-btn">Orders</a>
-
         <a href="adminTran.html" class="menu-btn">Transaction</a>
-
         <a href="adminAnalysis.html" class="menu-btn">Analysis</a>
-
         <a href="loginPage.html" class="menu-btn">Log Out</a>
-
     </div>
 
-
-    <!-- Main Content -->
     <div class="main">
-
-        
-
-
-
-
-
-    <!-- ADD PRODUCT PAGE -->
-            <div id="addProduct" class="page">
-                <h2>Add Product</h2>
-                <input type="text" id="pname" placeholder="Product Name">
-                <input type="number" id="pprice" placeholder="Price">
-                <input type="number" id="pstock" placeholder="Stock">
-                <textarea id="pdesc" placeholder="Product Description"></textarea>
-                <br><br>
-                <input type="file" id="pimage" accept="image/*">
-                <button onclick="addProduct()">Add Product</button>
-            </div>
-
-            
-
+        <div id="addProduct" class="page">
+            <h2>Add Product</h2>
+            <input type="text" id="pname" placeholder="Product Name" required>
+            <input type="number" id="pprice" placeholder="Price" required>
+            <input type="number" id="pstock" placeholder="Stock" required>
+            <textarea id="pdesc" placeholder="Product Description" required></textarea>
+            <br><br>
+            <input type="file" id="pimage" accept="image/*" required>
+            <button type="button" onclick="addProduct()">Add Product</button>
+        </div>
+    </div>
 </div>
 
-
- <script src="JS/adminItem.js"></script>
+<script src="JS/adminItem.js"></script>
 </body>
 </html>
