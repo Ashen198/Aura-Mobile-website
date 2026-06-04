@@ -29,17 +29,13 @@ function addProduct() {
         if (data.status === "success") {
             alert(data.message);
 
-            // Clear form fields
+            // Clear form fields safely
             document.getElementById("pname").value = "";
             document.getElementById("pprice").value = "";
             document.getElementById("pstock").value = "";
             document.getElementById("pdesc").value = "";
             document.getElementById("pimage").value = "";
             
-            // If you have a function to reload elements on the dashboard, call it here
-            if (typeof loadProducts === "function") {
-                loadProducts(); 
-            }
         } else {
             alert("Error: " + data.message);
         }
