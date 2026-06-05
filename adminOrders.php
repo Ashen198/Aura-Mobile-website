@@ -62,7 +62,22 @@ $result = $conn->query($sql);
                     </div>
 
                     <div class="item-actions">
-                        <button class="deliver">Deliver</button>
+                      <?php 
+                         // If the database row is already marked as Delivered, show the static badge
+                         if (isset($row['order_status']) && $row['order_status'] === 'Delivered') {
+                             ?>
+                             <span class="delivered-badge">Delivered</span>
+                             <?php 
+                         } else { 
+                             // Otherwise, show the active button wrapped in a form pointing to your updateStatus.php
+                             ?>
+                             <form action="updateStatus.php" method="POST" style="margin: 0; padding: 0;">
+                                 <input type="hidden" name="order_id" value="<?php echo $row['order_id']; ?>">
+                                 <button type="submit" class="deliver">Deliver</button>
+                             </form>
+                             <?php 
+                         } 
+                         ?>
                     </div>
                 </div>
                 <?php

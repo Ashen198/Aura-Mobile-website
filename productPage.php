@@ -51,7 +51,7 @@ $result = $conn->query($sql);
         <div class="profile-menu" id="profileMenu">
             <a href="loginPage.html">Login</a>
             <a href="register.html">Register</a>
-            <a href="paymentDetails.html">Payments</a>
+            <a href="paymentDetails.php">Payments</a>
             <a href="profile.php">My Profile</a>
             <a href="termspage.html">T & C</a>
             <a href="loginPage.html">Logout</a>
@@ -109,7 +109,7 @@ $result = $conn->query($sql);
                 <a href="loginPage.html">Login</a>
                 <a href="register.html">Register</a>
                 <a href="profile.php">My Profile</a>
-                <a href="paymentDetails.html">Payments</a>
+                <a href="paymentDetails.php">Payments</a>
                 <a href="termspage.html">Terms & Conditions</a>
             </div>
         </div>

@@ -315,3 +315,19 @@ color:white;
 .deliver:hover{
 background:#0400e6;
 }
+
+
+
+.delivered-badge {
+    background-color: #55efc4;     /* Light minty green background */
+    color: #00b894;                /* Deep green text font color */
+    padding: 8px 20px;
+    border-radius: 8px;            /* Matches your button corners */
+    font-size: 14px;
+    font-weight: bold;
+    display: inline-block;
+    text-align: center;
+    border: 1px solid #00b894;
+    cursor: default;               /* Changes cursor to normal pointer instead of hand clicker */
+    user-select: none;
+}

@@ -72,7 +72,7 @@ if ($result->num_rows === 1) {
             <li><a href="homePage.html" class="glass-btn">Home</a></li>
             <li><a href="productPage.html" class="glass-btn">Product</a></li>
             <li><a href="aboutPage.html" class="glass-btn">About</a></li>
-            <li><a href="cartPage.html" class="glass-btn">Cart</a></li>
+            <li><a href="cartPage.php" class="glass-btn">Cart</a></li>
             <li><button class="profile-btn" onclick="toggleMenu()">👤</button></li>
         </ul>
     </div>
@@ -81,7 +81,7 @@ if ($result->num_rows === 1) {
         <div class="profile-menu" id="profileMenu">
             <a href="loginPage.html">Login</a>
             <a href="register.html">Register</a>
-            <a href="paymentDetails.html">Payments</a>
+            <a href="paymentDetails.php">Payments</a>
             <a href="profile.php">My Profile</a>
             <a href="termspage.html">T & C</a>
             <a href="logout.php">Logout</a> </div>
@@ -90,8 +90,8 @@ if ($result->num_rows === 1) {
     <br>
 
     <div class="aboutfull">
-        <div class="part1">
-            <div class="transaction-container">
+        <div class="part1" >
+            <div class="transaction-container" >
                 <h2>- The Profile -</h2>
                 
                 <div class="profile-details-card">
@@ -107,6 +107,8 @@ if ($result->num_rows === 1) {
                 </div>
             </div>
         </div>
+         
+        
     </div>
 
     <footer class="footer">

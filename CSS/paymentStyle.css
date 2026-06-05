@@ -190,46 +190,12 @@ ul li a:hover {
 
 
 
-.part1{
-
-    
-    width: 1000px;
-    height: 450px;
-    
-    /*  */
-     display: flex;
-    
-      /* 
-    flex-direction: column;
-    justify-content: left;
-    align-items: center; 
-    text-align: left;
-    */
-    background: rgba(10, 1, 1, 0.1);
-     /* border-radius: 15px; */
-    backdrop-filter: blur(10px);
-    /* border: 1px solid rgba(255, 255, 255, 0.3); */
-     
-    
-    
-    margin-top: 120px;
-    
-    margin-left: 23px;
-    
-    padding: 150px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    color: rgb(0, 0, 0);
-    transition: 0.3s;
-}
 
 
     
 .part1{
     width: 1000px;
-    min-height: 450px;
+    min-height: 1000px;
 
     display: flex;
     flex-direction: column;
