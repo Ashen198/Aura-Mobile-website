@@ -124,7 +124,7 @@ $conn->close();
                         <button class="glass-btn" onclick="changeQty(1)">+</button>
                     </div>
 
-                    <button class="buy">Buy Now</button>
+                    <button class="buy" onclick="buyNow()">Buy Now</button>
                     <br>
                     <button class="buy-btn" data-id="<?php echo $product_id; ?>" onclick="addToCartDetails()">Add to Cart</button>
                 </div>
@@ -174,27 +174,77 @@ $conn->close();
     </footer>
 
     <script>
-        function selectColor(el) {
-            document.querySelectorAll(".color").forEach(c => c.classList.remove("active"));
-            el.classList.add("active");
-        }
+    // Variables to track selections
+    let selectedColor = "";
+    let selectedCapacity = "";
+    let quantity = 1;
 
-        function selectOption(el) {
-            document.querySelectorAll(".option").forEach(o => o.classList.remove("active"));
-            el.classList.add("active");
-        }
-
-        let quantity = 1;
-        function changeQty(val) {
-            quantity += val;
-            if (quantity < 1) quantity = 1;
-            document.getElementById("qty").innerText = quantity;
-        }
+    function selectColor(el) {
+        document.querySelectorAll(".color").forEach(c => c.classList.remove("active"));
+        el.classList.add("active");
         
-        function changeImage(element) {
-            document.getElementById("mainImage").src = element.src;
+        // Extract the background color style value
+        selectedColor = el.style.background; 
+    }
+
+    function selectOption(el) {
+        document.querySelectorAll(".option").forEach(o => o.classList.remove("active"));
+        el.classList.add("active");
+        
+        // Extract the text (e.g., "256GB")
+        selectedCapacity = el.innerText; 
+    }
+
+    function changeQty(val) {
+        quantity += val;
+        if (quantity < 1) quantity = 1;
+        document.getElementById("qty").innerText = quantity;
+    }
+    
+    function changeImage(element) {
+        document.getElementById("mainImage").src = element.src;
+    }
+
+    // Function executed when 'Buy Now' is clicked
+    function buyNow() {
+        if (!selectedColor) {
+            alert("Please select a color!");
+            return;
         }
-    </script>
+        if (!selectedCapacity) {
+            alert("Please select a capacity!");
+            return;
+        }
+
+        // Create a dynamic form to submit data to the backend
+        let form = document.createElement('form');
+        form.method = 'POST';
+        form.action = 'placeOrder.php';
+
+        let data = {
+            product_id: "<?php echo $product_id; ?>",
+            product_name: "<?php echo addslashes($product_name); ?>",
+            product_price: "<?php echo $product_price; ?>",
+            product_desc: "<?php echo addslashes($product_desc); ?>",
+            product_img: "<?php echo addslashes($product_img); ?>",
+            color: selectedColor,
+            capacity: selectedCapacity,
+            qty: quantity
+        };
+
+        for (let key in data) {
+            let input = document.createElement('input');
+            input.type = 'hidden';
+            input.name = key;
+            input.value = data[key];
+            form.appendChild(input);
+        }
+
+        document.body.appendChild(form);
+        form.submit();
+    }
+</script>
+
     <script src="JS/proDet1.js"></script>
     <script src="js/menu.js"></script>
 </body>

@@ -2,28 +2,38 @@ function changeImage(element){
     document.getElementById("mainImage").src = element.src;
 }
 function addToCartDetails() {
-
-    let name = "iPhone 17 Pro";
-    let price = 292000;
-    
-
-    let qty = parseInt(document.getElementById("qty").innerText);
-
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-    let existing = cart.find(item => item.name === name);
-
-    if (existing) {
-        existing.quantity += qty;
-    } else {
-        cart.push({
-            name: name,
-            price: price,
-            quantity: qty
-        });
+    if (!selectedColor) {
+        alert("Please select a color!");
+        return;
+    }
+    if (!selectedCapacity) {
+        alert("Please select a capacity!");
+        return;
     }
 
-    localStorage.setItem("cart", JSON.stringify(cart));
+    let form = document.createElement('form');
+    form.method = 'POST';
+    form.action = 'addToCartBackend.php';
 
-    alert("Added to cart!");
+    let data = {
+        product_id: "<?php echo $product_id; ?>",
+        product_name: "<?php echo addslashes($product_name); ?>",
+        product_price: "<?php echo $product_price; ?>",
+        product_desc: "<?php echo addslashes($product_desc); ?>",
+        product_img: "<?php echo addslashes($product_img); ?>",
+        color: selectedColor,
+        capacity: selectedCapacity,
+        qty: quantity
+    };
+
+    for (let key in data) {
+        let input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = key;
+        input.value = data[key];
+        form.appendChild(input);
+    }
+
+    document.body.appendChild(form);
+    form.submit();
 }
