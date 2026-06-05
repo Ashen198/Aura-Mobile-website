@@ -50,7 +50,7 @@ if ($result->num_rows === 1) {
             font-size: 1.1rem;
         }
         .profile-field strong {
-            color: #ffc107; /* Or any theme highlight color you prefer */
+            color: #00026dff; /* Or any theme highlight color you prefer */
         }
     </style>
 </head>
