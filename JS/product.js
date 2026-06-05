@@ -35,11 +35,12 @@ function displayProducts() {
           let imgSrc = p.image || "https://media.newyorker.com/photos/59095bb86552fa0be682d9d0/master/w_1920,c_limit/Monkey-Selfie.jpg";
 
           card.innerHTML = `
-            <img src="${imgSrc}" alt="${p.name}">
+            <img src="${imgSrc}" alt="${p.pimage}">
             <h3>${escapeHTML(p.name)}</h3>
-            <div class="price">Rs ${escapeHTML(p.price)}</div>
-            <div class="description">${escapeHTML(p.description || '')}</div>
-            <div class="stock">Stock: ${escapeHTML(p.stock)}</div>
+            <div class="price">Rs ${escapeHTML(p.pprice)}</div>
+            <div class="description">${escapeHTML(p.pdesc || '')}</div>
+            <div class="stock">Stock: ${escapeHTML(p.pstock)}</div>
+            <a href="productDetails.php?id=${p.pid}" class="glass-btn">View Details</a>
           `;
 
           grid.appendChild(card);
