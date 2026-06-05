@@ -26,7 +26,11 @@ function login() {
     .then(data => {
         if (data.status === "success") {
             alert("Login successful! Welcome back.");
+            
+            // CHANGED THIS LINE: Redirects straight to your dynamic PHP profile page
+            
             window.location.href = "homePage.html"; 
+            
         } else {
             alert(data.message); // This will show your "No account found..." message cleanly in an alert box!
         }

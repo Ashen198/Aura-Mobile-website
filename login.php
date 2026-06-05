@@ -29,14 +29,12 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
             // Verify password hash
             if (password_verify($password, $user['password'])) {
                 
-                // Set session variables to remember them on the dashboard
+                // Set session variables to remember them across pages
                 $_SESSION['user_id'] = $user['id'];
                 $_SESSION['user_name'] = $user['fullname'];
                 
                 $response['status'] = "success";
                 $response['message'] = "Login successful! Welcome back.";
-
-                
                 
             } else {
                 $response['message'] = "Invalid password. Please try again.";
