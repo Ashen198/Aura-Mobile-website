@@ -42,7 +42,7 @@ $result = $conn->query($sql);
             <li><a href="homePage.html" class="glass-btn">Home</a></li>
             <li><a href="productPage.php" class="glass-btn">Product</a></li>
             <li><a href="aboutPage.html" class="glass-btn">About</a></li>
-            <li><a href="cartPage.html" class="glass-btn">Cart</a></li>
+            <li><a href="cartPage.php" class="glass-btn">Cart</a></li>
             <li><button class="profile-btn" onclick="toggleMenu()">👤</button></li>
         </ul>
     </div>

@@ -80,7 +80,6 @@ $totalCost = 0;
                  <div class="productDetails">
                    <h3><?php echo htmlspecialchars($row['product_name']); ?></h3>
                    <p>Rs <?php echo number_format($row['price'], 2); ?></p>
-                   <p style="font-size: 13px; color: #666;">Qty: <?php echo $row['quantity']; ?></p>
                  </div>
               </div>
             </div>

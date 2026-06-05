@@ -65,7 +65,7 @@ $conn->close();
             <li><a href="homePage.html" class="glass-btn">Home</a></li>
             <li><a href="productPage.php" class="glass-btn">Product</a></li>
             <li><a href="aboutPage.html" class="glass-btn">About</a></li>
-            <li><a href="cartPage.html" class="glass-btn">Cart</a></li>
+            <li><a href="cartPage.php" class="glass-btn">Cart</a></li>
             <li><button class="profile-btn" onclick="toggleMenu()">👤</button></li>
         </ul>
     </div>
@@ -220,6 +220,43 @@ $conn->close();
         let form = document.createElement('form');
         form.method = 'POST';
         form.action = 'placeOrder.php';
+
+        let data = {
+            product_id: "<?php echo $product_id; ?>",
+            product_name: "<?php echo addslashes($product_name); ?>",
+            product_price: "<?php echo $product_price; ?>",
+            product_desc: "<?php echo addslashes($product_desc); ?>",
+            product_img: "<?php echo addslashes($product_img); ?>",
+            color: selectedColor,
+            capacity: selectedCapacity,
+            qty: quantity
+        };
+
+        for (let key in data) {
+            let input = document.createElement('input');
+            input.type = 'hidden';
+            input.name = key;
+            input.value = data[key];
+            form.appendChild(input);
+        }
+
+        document.body.appendChild(form);
+        form.submit();
+    }
+
+    function addToCartDetails() {
+        if (!selectedColor) {
+            alert("Please select a color!");
+            return;
+        }
+        if (!selectedCapacity) {
+            alert("Please select a capacity!");
+            return;
+        }
+
+        let form = document.createElement('form');
+        form.method = 'POST';
+        form.action = 'addToCartBackend.php';
 
         let data = {
             product_id: "<?php echo $product_id; ?>",

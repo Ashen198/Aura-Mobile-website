@@ -1,15 +1,8 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $servername = "localhost";
-    $username = "root"; 
-    $password = ""; 
-    $dbname = "aura_mobile";
-
-    $conn = new mysqli($servername, $username, $password, $dbname);
-
-    if ($conn->connect_error) {
-        die("Database Connection failed: " . $conn->connect_error);
-    }
+    require_once 'db_config.php';
 
     $product_id = intval($_POST['product_id']);
     $product_name = $_POST['product_name'];
@@ -23,6 +16,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $combined_capacity_desc = "Capacity: " . $capacity . " | Description: " . $description;
 
     $stmt = $conn->prepare("INSERT INTO cart_tb (product_id, product_name, price, color, capacity_desc, product_image, quantity) VALUES (?, ?, ?, ?, ?, ?, ?)");
+    if (!$stmt) {
+        die("Prepare failed: " . $conn->error);
+    }
     $stmt->bind_param("isdsssi", $product_id, $product_name, $price, $color, $combined_capacity_desc, $product_img, $qty);
 
     if ($stmt->execute()) {
