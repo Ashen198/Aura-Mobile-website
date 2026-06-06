@@ -9,7 +9,7 @@ function login() {
 
     // Admin back-door path
     if (username === "admin" && password === "1234") {
-        window.location.href = "adminActive.html";
+        window.location.href = "adminActive.php";
         return; 
     }
 

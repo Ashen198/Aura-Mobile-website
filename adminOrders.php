@@ -33,7 +33,7 @@ $result = $conn->query($sql);
             <img src="rsc/logo.jpeg" alt="Logo">
         </div>
         <a href="adminItem.html" class="menu-btn">List an item</a>
-        <a href="adminActive.html" class="menu-btn">Update item</a>
+        <a href="adminActive.php" class="menu-btn">Update item</a>
         <a href="adminOrders.php" class="menu-btn">Orders</a>
         <a href="adminTran.html" class="menu-btn">Transaction</a>
         <a href="adminAnalysis.html" class="menu-btn">Analysis</a>

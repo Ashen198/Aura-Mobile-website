@@ -17,8 +17,8 @@ if ($conn->connect_error) {
     exit();
 }
 
-// Select the exact columns visible in your phpMyAdmin table structure
-$sql = "SELECT pname, pprice, pstock, pdesc, pimage FROM product_tb";
+// Select pid along with other required parameters from product_tb
+$sql = "SELECT pid, pname, pprice, pstock, pdesc, pimage FROM product_tb";
 $result = $conn->query($sql);
 
 $products = [];
@@ -27,6 +27,7 @@ if ($result) {
     if ($result->num_rows > 0) {
         while($row = $result->fetch_assoc()) {
             $products[] = [
+                "pid" => $row['pid'],
                 "name" => $row['pname'],
                 "price" => $row['pprice'],
                 "stock" => $row['pstock'],
