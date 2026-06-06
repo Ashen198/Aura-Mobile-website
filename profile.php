@@ -42,7 +42,7 @@ if ($result->num_rows === 1) {
             backdrop-filter: blur(10px);
             padding: 25px;
             border-radius: 12px;
-            margin-top: 20px;
+            margin-top: -100px;
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
         .profile-field {
@@ -52,6 +52,14 @@ if ($result->num_rows === 1) {
         .profile-field strong {
             color: #00026dff; /* Or any theme highlight color you prefer */
         }
+        .transaction-container {
+            margin-top: 90px;
+           
+        }
+
+        
+
+
     </style>
 </head>
 <body>
@@ -91,10 +99,18 @@ if ($result->num_rows === 1) {
 
     <div class="aboutfull">
         <div class="part1" >
-            <div class="transaction-container" >
-                <h2>- The Profile -</h2>
+            <h2><center>- The Profile -</center></h2>
+            <div class="transaction-container"   style="width: 800px; height: 150px; " >
+                
                 
                 <div class="profile-details-card">
+
+
+                   <div><img src="rsc/pro.png" style="width: 150px; height: auto;" alt="17 Pro Silver"> </div>
+                   <br>
+
+
+
                     <div class="profile-field">
                         <strong>Full Name:</strong> <?php echo htmlspecialchars($user['fullname']); ?>
                     </div>
