@@ -119,6 +119,7 @@ $result = $conn->query($sql);
         </div>
     </footer>
 
+   
     <script src="js/menu.js"></script>
     </body>
 </html>
