@@ -100,7 +100,7 @@ $result = $conn->query($sql);
                 <a href="homePage.html">Home</a>
                 <a href="productPage.php">Products</a>
                 <a href="aboutPage.html">About Us</a>
-                <a href="cartPage.html">Cart</a>
+                <a href="cartPage.php">Cart</a>
                 <a href="contactPage.html">Contact</a>
             </div>
 

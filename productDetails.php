@@ -74,8 +74,8 @@ $conn->close();
         <div class="profile-menu" id="profileMenu">
             <a href="loginPage.html">Login</a>
             <a href="register.html">Register</a>
-            <a href="paymentDetails.html">Payments</a>
-            <a href="paymentDetails.html">My Profile</a>
+            <a href="paymentDetails.php">Payments</a>
+            <a href="paymentDetails.php">My Profile</a>
             <a href="termspage.html">T & C</a>
             <a href="loginPage.html">Logout</a>
         </div>
@@ -159,13 +159,13 @@ $conn->close();
                 <a href="homePage.html">Home</a>
                 <a href="productPage.php">Products</a>
                 <a href="aboutPage.html">About Us</a>
-                <a href="cartPage.html">Cart</a>
+                <a href="cartPage.php">Cart</a>
             </div>
             <div class="footer-section">
                 <h3>Account</h3>
                 <a href="loginPage.html">Login</a>
                 <a href="register.html">Register</a>
-                <a href="profile.html">My Profile</a>
+                <a href="profile.php">My Profile</a>
             </div>
         </div>
         <div class="footer-bottom">
