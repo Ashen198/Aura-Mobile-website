@@ -34,7 +34,7 @@ $result = $conn->query($sql);
         <a href="adminItem.html" class="menu-btn">List an item</a>
         <a href="adminActive.php" class="menu-btn active">Update item</a>
         <a href="adminOrders.php" class="menu-btn">Orders</a>
-        <a href="adminTran.html" class="menu-btn">Transaction</a>
+        <a href="adminTran.php" class="menu-btn">Transaction</a>
         <a href="adminAnalysis.html" class="menu-btn">Analysis</a>
         <a href="loginPage.html" class="menu-btn">Log Out</a>
     </div>
