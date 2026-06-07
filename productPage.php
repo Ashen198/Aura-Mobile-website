@@ -76,8 +76,8 @@ $result = $conn->query($sql);
                             <img src="<?php echo $image; ?>" alt="<?php echo $name; ?>">
                             <h3><?php echo $name; ?></h3>
                             <div class="price">Rs <?php echo $price; ?></div>
-                            <div class="description"><?php echo $desc; ?></div>
-                            
+                           
+                            <br>
                             <a href="productDetails.php?id=<?php echo $pid; ?>" class="glass-btn">View Details</a>
                         </div>
 
