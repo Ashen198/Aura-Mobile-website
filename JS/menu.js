@@ -17,17 +17,35 @@ window.onclick = function(event) {
 
 
 
+// function filterProducts() {
+//     let input = document.getElementById("searchInput").value.toLowerCase();
+//     let products = document.querySelectorAll(".product1");
+
+//     products.forEach(product => {
+//         let name = product.querySelector("h3").innerText.toLowerCase();
+
+//         if (name.includes(input)) {
+//             product.style.display = "flex"; // show
+//         } else {
+//             product.style.display = "none"; // hide
+//         }
+//     });
+// }
+
+
 function filterProducts() {
     let input = document.getElementById("searchInput").value.toLowerCase();
-    let products = document.querySelectorAll(".product1");
+    // Ensure this matches the class name in your PHP file
+    let products = document.querySelectorAll(".product-card");
 
     products.forEach(product => {
         let name = product.querySelector("h3").innerText.toLowerCase();
 
+        // If it matches, show it; if not, hide it
         if (name.includes(input)) {
-            product.style.display = "flex"; // show
+            product.style.display = "flex"; 
         } else {
-            product.style.display = "none"; // hide
+            product.style.display = "none"; 
         }
     });
 }

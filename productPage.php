@@ -31,8 +31,8 @@ $result = $conn->query($sql);
                <a href="homePage.html"><img src="rsc/logo.png"></a> 
             </div>
             <div class="search-bar">
-               <form action="/search/">
-                   <input type="search" id="searchInput" placeholder="Search products..." onkeyup="filterProducts()" />
+               <form action="search_results.php">
+                   <input type="search" id="searchInput" name="q" placeholder="Search products..." onkeyup="filterProducts()" />
                    <button type="submit">🔍</button>
                </form>
             </div>
