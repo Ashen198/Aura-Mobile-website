@@ -96,8 +96,7 @@ $conn->close();
 
             <div class="thumbnail-container">
                 <img src="<?php echo htmlspecialchars($product_img); ?>" onclick="changeImage(this)">
-                <img src="rsc/airpods4.jpg" onclick="changeImage(this)">
-                <img src="rsc/watch11.jpg" onclick="changeImage(this)">
+            
             </div>
 
             <div class="product-container">
