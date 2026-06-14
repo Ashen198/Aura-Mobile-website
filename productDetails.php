@@ -138,17 +138,8 @@ $conn->close();
             <h2>Product Details</h2>
             <p><?php echo htmlspecialchars($product_desc); ?></p>
             
-            <div class="A19ChipVideo">
-                <video controls autoplay muted loop> 
-                    <source src="rsc/A19Chip.mp4" type="video/mp4">
-                </video>
-            </div>
-            <br>
-
-            <h3>Features:</h3>
-            <p>Super Retina XDR display feature standard configurations</p>
-            <p>High tier compute architecture chipsets</p>
-            <p>Computational multi-lens array camera system options</p>
+            
+            
         </div>
     </div>
 
